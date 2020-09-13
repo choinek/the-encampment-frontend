@@ -1,3 +1,73 @@
+# The encampment-frontend
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
 [![Build Status](https://travis-ci.com/morewings/cra-template-quickstart-redux.svg?branch=master)](https://travis-ci.com/morewings/cra-template-quickstart-redux)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=morewings/cra-template-quickstart-redux)](https://dependabot.com)
 [![dependencies Status](https://david-dm.org/morewings/cra-template-quickstart-redux/status.svg)](https://david-dm.org/morewings/cra-template-quickstart-redux)
@@ -12,40 +82,11 @@ See [full documentation](https://cra-template-quickstart-redux.netlify.app).
 
 Original Create React App README available [here](./README_CRA.md)
 
-## Usage
-
-```shell script
-npx create-react-app %PROJECT_NAME% --template quickstart-redux
-``` 
-Or
-```shell script
-yarn create react-app %PROJECT_NAME% --template quickstart-redux
-```
-
-`npx` command installs most recent stable version of CRA from npm. `--template` parameter points to this template, note that `cra-template-` prefix is omitted.
-
-Then
-
-```shell script
-cd %PROJECT_NAME%
-yarn start
-```
-
-## Motivation
-
-I use Create React App pretty much often. But I hate to write same boilerplate code to make Redux working and configure some other useful stuff again and again. This template contains test and eslint configurations and Redux boilerplate code, required for rapid start of your fabulous project.
-
-Due to CRA template limitations (we can change only `scripts` and `dependencies` inside generated `package.json`) all configuration is done by adding config files where possible.
-
-## Redux
-
-Template provides basic Redux configuration with [feature based](https://redux.js.org/style-guide/style-guide/#structure-files-as-feature-folders-or-ducks) folder structure. You can use [Redux devtools browser extension](http://extension.remotedev.io/). Template has examples of sync (`src/features/counter`) and async (`src/features/random`) Redux features and tests for them.
-
 ## Git hooks
 
 Git hooks management is provided by [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged). To enable git hooks you have to rename file `huskyrc-template` to `.huskyrc` in the root of project.
 
-Another option is to extend `package.json` with: 
+Another option is to extend `package.json` with:
 
 ```json
 {
@@ -58,7 +99,8 @@ Another option is to extend `package.json` with:
 }
 ```
 
-Thus every time you commit something `husky` will run `eslint --fix` command  on staged files, preventing you from committing badly formatted code. You can change or disable this behavior inside `.linstagedrc` config file. Before each push tests will run in the same manner. 
+Thus every time you commit something `husky` will run `eslint --fix` command  on staged files, preventing you from committing badly formatted code. You can change or disable this behavior inside `.linstagedrc` config file. Before each push tests will run in the same manner.
+
 
 ### Caveats
 
@@ -98,7 +140,7 @@ Eslint rules are commented for your convenience, feel free to tweak or remove th
 "import/prefer-default-export": 0,
 // Force {foo: 'bar'} object literal syntax.
 "object-curly-spacing": ["error", "never"],
-// Throw warning instead of error when function is not properly formatted. 
+// Throw warning instead of error when function is not properly formatted.
 // Feel free to choose your favorite option https://eslint.org/docs/rules/arrow-body-style
 "arrow-body-style": ["warn", "as-needed"],
 // Make prettier code formatting suggestions more verbose.
@@ -110,14 +152,14 @@ Eslint rules are commented for your convenience, feel free to tweak or remove th
 "react/destructuring-assignment": "off",
 // Disable <Fragment> => <> replacement. Feel free to change
 "react/jsx-fragments": "off",
-// Below is the set of functional rules to warn developer about accidental mutations, 
+// Below is the set of functional rules to warn developer about accidental mutations,
 // which may cause error in reducers etc.
 // No delete operator.
 "fp/no-delete": "warn",
 // Warning when Object.assign(a, b) used, since it mutates first argument.
 // Object.assign({}, a, b) is ok.
 "fp/no-mutating-assign": "warn",
-// Warning when mutating method (pop, push, reverse, shift, sort, splice, unshift, etc) 
+// Warning when mutating method (pop, push, reverse, shift, sort, splice, unshift, etc)
 // is used. Ramda and lodash/fp are allowed (_.pop, R.push)
 "fp/no-mutating-methods": [
   "warn",
@@ -125,7 +167,7 @@ Eslint rules are commented for your convenience, feel free to tweak or remove th
     "allowedObjects": ["_", "R"]
   }
 ],
-// Warning when mutating operators (++, --, etc) are used, object = {} also. 
+// Warning when mutating operators (++, --, etc) are used, object = {} also.
 // `Component.propTypes`, `Component.defaultProps`, common.js (`module.exports`)
 // and `ref.current` are ok.
 "fp/no-mutation": [
@@ -194,11 +236,11 @@ SASS/SCSS support comes "out of the box" in CRA. To enable it:
     ```js
     import React from 'react';
     import classes from './Component.module.scss'; // note the changed extension
-    
+
     const Component = () => (
       <div className={classes.wrapper}>Component</div>
     )
-    ``` 
+    ```
 3. Change `.lintstagedrc` to lint `scss` files instead of `css`.
 
     ```json
@@ -218,7 +260,7 @@ You can see all changes required to enable SASS/SCSS in [corresponding PR](https
 
 1. Install `postcss-cli` and related plugins:
     ```shell script
-    yarn add --dev postcss-nested postcss-cli postcss-preset-env npm-run-all 
+    yarn add --dev postcss-nested postcss-cli postcss-preset-env npm-run-all
     ```
 2. Modify package scripts:
 
@@ -236,7 +278,7 @@ You can see all changes required to enable SASS/SCSS in [corresponding PR](https
 
     ```js
     const pkg = require('./package.json');
-    
+
     module.exports = {
       plugins: [
         require('postcss-nested'), // handle nested selectors, like LESS or SASS
@@ -250,14 +292,14 @@ You can see all changes required to enable SASS/SCSS in [corresponding PR](https
 4. Add rule to `.gitignore` and `.stylelintrc` to ignore all css files, since we are generating them.
 
     #### .gitignore
-    
+
     ```gitignore
     # css
     *.css
     ```
-   
+
    #### .stylelintrc
-       
+
    ```json
     {
     "ignoreFiles": ["**/*.snap", "**/*.css"]
@@ -275,14 +317,14 @@ You can see all changes required to enable SASS/SCSS in [corresponding PR](https
       ]
     }
     ```
-   
+
 You can see all changes required to enable PostCSS in [corresponding PR](https://github.com/morewings/cra-template-quickstart-redux/pull/15).
 
 ### Less watcher
 
 1. Install `less` and related plugins:
     ```shell script
-    yarn add --dev less less-watch-compiler npm-run-all 
+    yarn add --dev less less-watch-compiler npm-run-all
     ```
 2. Modify package scripts:
 
@@ -299,14 +341,14 @@ You can see all changes required to enable PostCSS in [corresponding PR](https:/
 3. Add rule to `.gitignore` and `.stylelintrc` to ignore all css files, since we are generating them.
 
     #### .gitignore
-    
+
     ```gitignore
     # css
     *.css
     ```
-   
+
    #### .stylelintrc
-       
+
    ```json
     {
     "ignoreFiles": ["**/*.snap", "**/*.css"]
@@ -324,7 +366,7 @@ You can see all changes required to enable PostCSS in [corresponding PR](https:/
       ]
     }
     ```
-   
+
 You can see all changes required to enable Less in [corresponding PR](https://github.com/morewings/cra-template-quickstart-redux/pull/17).
 
 ## Absolute imports
