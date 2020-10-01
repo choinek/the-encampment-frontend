@@ -11,7 +11,7 @@ export default function Menu() {
 
 const View = styled.div`
 background: gray; 
-width: 25%;
+width: 15%;
 height: 100%;
 display: -ms-flexbox;
     display: -webkit-flex;

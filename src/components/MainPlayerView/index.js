@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './MainPlayerView.module.css';
 import styled from "styled-components";
 import { Col } from 'reactstrap';
+import SampleCard from './SampleCard';
 
 export default function MainPlayerView() {
   return (
@@ -16,11 +17,11 @@ export default function MainPlayerView() {
         </Col>
         <Col sm="12">
             <MainCardsView>
+                <CardSlot><SampleCard /></CardSlot>
+                <CardSlot><SampleCard /></CardSlot>
                 <CardSlot></CardSlot>
                 <CardSlot></CardSlot>
-                <CardSlot></CardSlot>
-                <CardSlot></CardSlot>
-                <CardSlot></CardSlot>
+                <CardSlot><SampleCard /></CardSlot>
                 <CardSlot></CardSlot>
             </MainCardsView>
         </Col>

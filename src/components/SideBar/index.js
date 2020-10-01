@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
+import MainCards from './MainCards';
 
 export default function SideBar() {
   return (
     <View>
         <DiscardedCards className="col-sm-3"></DiscardedCards>
+        <MainCards />
+        <div></div>
     </View>
   );
 };
