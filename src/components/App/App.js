@@ -1,12 +1,10 @@
 import React from 'react';
-import Counter from '../Counter';
-import Random from '../Random';
+import MainPlayerView from '../MainPlayerView';
 import classes from './App.module.css';
 
 const App = () => (
   <div className={classes.container}>
-    <Counter />
-    <Random />
+    <MainPlayerView />
   </div>
 );
 
