@@ -10,7 +10,10 @@ Karty do dobierania
 };
 
 const Cards = styled.div`
-background: gray; 
+background: #654321; 
 width: 200px;
 height: 120px;
+margin-right: 35%;
+display: flex;
+justify-content: center;
 `;

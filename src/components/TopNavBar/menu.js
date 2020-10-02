@@ -10,7 +10,7 @@ export default function Menu() {
 };
 
 const View = styled.div`
-background: gray; 
+background: #2b1d0e; 
 width: 15%;
 height: 100%;
     display: flex;

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import withReduxFeatures from './withReduxFeatures';
 import App from './components/App';
 import './index.css';
+import './layout/_base.scss';
+
 import * as serviceWorker from './serviceWorker';
 
 /** Wrap App component with store providers */

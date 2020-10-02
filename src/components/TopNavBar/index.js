@@ -19,12 +19,10 @@ height: 150px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-content: flex-start;
-    align-items: center;
 `;
 
 const ActiveCardsView = styled.div`
-background: gray; 
+background: #2b1d0e; 
 width: 10%;
 height: 100%;
 `;

@@ -17,12 +17,12 @@ export default function MainPlayerView() {
         </Col>
         <Col sm="12">
             <MainCardsView>
-                <CardSlot><SampleCard /></CardSlot>
-                <CardSlot><SampleCard /></CardSlot>
-                <CardSlot></CardSlot>
-                <CardSlot></CardSlot>
-                <CardSlot><SampleCard /></CardSlot>
-                <CardSlot></CardSlot>
+                <CardSlot className="card-back"><SampleCard /></CardSlot>
+                <CardSlot className="card-back"><SampleCard /></CardSlot>
+                <CardSlot className="card-back"></CardSlot>
+                <CardSlot className="card-back"></CardSlot>
+                <CardSlot className="card-back"><SampleCard /></CardSlot>
+                <CardSlot className="card-back"></CardSlot>
             </MainCardsView>
         </Col>
     </View>
@@ -37,7 +37,7 @@ height: 250px;
 const MainCardsView = styled.div`
 width: 100%;
 height: 100px;
-background-color: lightgray;
+background-color: #654321;
 display: flex;
 flex-direction: row-reverse;
 flex-wrap: nowrap;
@@ -59,13 +59,12 @@ align-items: center;
 const CardSlot = styled.div`
 width: 17%;
 height: 235px;
-background-color: white;
 border: 2px solid black;
 `;
 
 const ActiveCard = styled.div`
 width: 17%;
 height: 150px;
-background-color: lightgray;
+background-color: #654321;
 border: 2px solid black;
 `;
