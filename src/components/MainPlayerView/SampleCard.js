@@ -5,7 +5,7 @@ export default function SampleCard() {
   return (
     <View>
 <Img src={require('image.png')} />
-<Description>Dużo ognisków</Description>
+<Description>Ognisko chce ci wpierdolić, sanity -100</Description>
     </View>
   );
 };
