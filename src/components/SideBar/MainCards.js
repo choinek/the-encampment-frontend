@@ -11,6 +11,6 @@ Karty do dobierania
 
 const Cards = styled.div`
 background: gray; 
-width: 150px;
-height: 200px;
+width: 200px;
+height: 120px;
 `;

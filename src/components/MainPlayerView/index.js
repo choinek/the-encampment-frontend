@@ -31,12 +31,12 @@ export default function MainPlayerView() {
 
 const View = styled.div`
 width: 60%;
-height: 400px;
+height: 250px;
 `;
 
 const MainCardsView = styled.div`
 width: 100%;
-height: 250px;
+height: 100px;
 background-color: lightgray;
 display: -ms-flexbox;
 display: -webkit-flex;
@@ -59,7 +59,7 @@ align-items: center;
 `;
 const ActiveCardsView = styled.div`
 width: 100%;
-height: 150px;
+height: 110px;
 display: -ms-flexbox;
 display: -webkit-flex;
 display: flex;

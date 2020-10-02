@@ -5,7 +5,8 @@ import TopNavBar from '../TopNavBar';
 import SideBar from '../SideBar';
 
 const App = () => (
-  <div className={classes.container}>
+      <div className={classes.container}>
+
     <TopNavBar />
     <SideBar />
     <MainPlayerView />
