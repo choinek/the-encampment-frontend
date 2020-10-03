@@ -9,20 +9,21 @@ export default function MainPlayerView() {
     <View className={classes.playerView}>
         <Col sm="12">
             <ActiveCardsView>
-                <ActiveCard></ActiveCard>
-                <ActiveCard></ActiveCard>
-                <ActiveCard></ActiveCard>
-                <ActiveCard></ActiveCard>
+                <ActiveCard className="card-back"></ActiveCard>
+                <ActiveCard className="card-back"></ActiveCard>
+                <ActiveCard className="card-back"></ActiveCard>
+                <ActiveCard className="card-back"></ActiveCard>
             </ActiveCardsView>
         </Col>
         <Col sm="12">
             <MainCardsView>
-                <CardSlot className="card-back"><SampleCard /></CardSlot>
-                <CardSlot className="card-back"><SampleCard /></CardSlot>
-                <CardSlot className="card-back"></CardSlot>
-                <CardSlot className="card-back"></CardSlot>
-                <CardSlot className="card-back"><SampleCard /></CardSlot>
-                <CardSlot className="card-back"></CardSlot>
+                <CardSlot className="card-back rotate-35 mt-120"><SampleCard /></CardSlot>
+                <CardSlot className="card-back rotate-15 mt-20"><SampleCard /></CardSlot>
+                <CardSlot className="card-back rotate-10 mb-50"></CardSlot>
+                <CardSlot className="card-back mb-80"></CardSlot>
+                <CardSlot className="card-back rotate--10 mb-50"></CardSlot>
+                <CardSlot className="card-back rotate--15 mt-20"><SampleCard /></CardSlot>
+                <CardSlot className="card-back rotate--35 mt-120"></CardSlot>
             </MainCardsView>
         </Col>
     </View>
@@ -37,13 +38,13 @@ height: 250px;
 const MainCardsView = styled.div`
 width: 100%;
 height: 100px;
-background-color: #654321;
 display: flex;
 flex-direction: row-reverse;
 flex-wrap: nowrap;
 justify-content: space-between;
 align-content: flex-start;
 align-items: center;
+transform: scale(0.8);
 `;
 const ActiveCardsView = styled.div`
 width: 100%;
@@ -57,14 +58,12 @@ align-items: center;
 `;
 
 const CardSlot = styled.div`
-width: 17%;
-height: 235px;
+width: 150px;
+height: 200px;
 border: 2px solid black;
 `;
 
 const ActiveCard = styled.div`
-width: 17%;
-height: 150px;
-background-color: #654321;
-border: 2px solid black;
+width: 150px;
+height: 200px;
 `;

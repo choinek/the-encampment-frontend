@@ -5,7 +5,7 @@ import MainCards from './MainCards';
 export default function SideBar() {
   return (
     <View>
-        <DiscardedCards className="col-sm-3 card-back"><p>Discarded cards</p></DiscardedCards>
+        <DiscardedCards className="col-sm-3 card-back-horizontal"><p>Discarded cards</p></DiscardedCards>
         <MainCards />
         <div>See next player cards</div>
     </View>
@@ -23,8 +23,8 @@ align-items: center;
 `;
 
 const DiscardedCards = styled.div`
-width: 150px;
-height: 200px;
+width: 200px;
+height: 140px;
 color: white;
 position: relative;
 
