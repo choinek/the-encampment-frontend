@@ -7,7 +7,7 @@ export default function SideBar() {
     <View>
         <DiscardedCards className="col-sm-3 card-back"><p>Discarded cards</p></DiscardedCards>
         <MainCards />
-        <div></div>
+        <div>See next player cards</div>
     </View>
   );
 };
