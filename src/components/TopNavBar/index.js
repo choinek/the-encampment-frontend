@@ -22,7 +22,7 @@ height: 150px;
 `;
 
 const ActiveCardsView = styled.div`
-background: #2b1d0e; 
+background: black; 
 width: 10%;
 height: 100%;
 `;

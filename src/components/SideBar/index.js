@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
 import MainCards from './MainCards';
+import SidePanel from './SidePanel';
 
 export default function SideBar() {
   return (
     <View>
         <DiscardedCards className="col-sm-3 card-back-horizontal"><p>Discarded cards</p></DiscardedCards>
         <MainCards />
-        <div>See next player cards</div>
+        <SidePanel />
     </View>
   );
 };
