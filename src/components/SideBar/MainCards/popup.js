@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Modal, ModalHeader } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import PropTypes from 'prop-types';
 
-export default function MainCardsPopup() {
+export default function MainCardsPopup({ isOpen, close }) {
   return (
-    <Modal>
-      <ModalHeader>Active Card</ModalHeader>
-      <Cards className="card-back">
-        <p>Active Cards</p>
-      </Cards>
+    <Modal isOpen={isOpen} toggle={close} unmountOnClose size="lg">
+      <ModalHeader toggle={close}>Active Card</ModalHeader>
+      <ModalBody>
+        <Cards className="card-back">
+          <p>Active Cards</p>
+        </Cards>
+      </ModalBody>
     </Modal>
   );
 }
@@ -28,3 +31,8 @@ const Cards = styled.div`
     transform: translate(-50%, -50%);
   }
 `;
+
+MainCardsPopup.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
+};

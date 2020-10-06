@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import MainCardsPopup from './popup';
 
 export default function MainCards() {
+  const [isOpen, setIsOpen] = useState(false);
+  const closePopup = () => setIsOpen(false);
+
   return (
-    <Cards className="card-back">
-      <p>Active Cards</p>
-    </Cards>
+    <>
+      <Cards className="card-back" onClick={() => setIsOpen(true)}>
+        <p>Active Cards</p>
+      </Cards>
+      {isOpen ? <MainCardsPopup close={closePopup} isOpen={isOpen} /> : null}
+    </>
   );
 }
 

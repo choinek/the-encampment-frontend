@@ -6,7 +6,7 @@ import SidePanel from './SidePanel';
 export default function SideBar() {
   return (
     <View>
-      <DiscardedCards className="col-sm-3 card-back-horizontal">
+      <DiscardedCards className="card-back-horizontal">
         <p>Discarded cards</p>
       </DiscardedCards>
       <MainCards />
