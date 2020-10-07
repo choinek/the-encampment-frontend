@@ -3,17 +3,13 @@ import styled from 'styled-components';
 import { Col } from 'reactstrap';
 import classes from './MainPlayerView.module.css';
 import SampleCard from './SampleCard';
+import ActiveCards from './ActiveCards';
 
 export default function MainPlayerView() {
   return (
     <View className={classes.playerView}>
       <Col sm="12">
-        <ActiveCardsView>
-          <ActiveCard className="card-back" />
-          <ActiveCard className="card-back" />
-          <ActiveCard className="card-back" />
-          <ActiveCard className="card-back" />
-        </ActiveCardsView>
+        <ActiveCards />
       </Col>
       <Col sm="12">
         <MainCardsView>
@@ -52,24 +48,9 @@ const MainCardsView = styled.div`
   align-items: center;
   transform: scale(0.8);
 `;
-const ActiveCardsView = styled.div`
-  width: 100%;
-  height: 110px;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: flex-start;
-  align-items: center;
-`;
 
 const CardSlot = styled.div`
   width: 150px;
   height: 200px;
   border: 2px solid black;
-`;
-
-const ActiveCard = styled.div`
-  width: 150px;
-  height: 200px;
 `;
