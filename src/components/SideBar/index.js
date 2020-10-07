@@ -2,13 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import MainCards from './MainCards';
 import SidePanel from './SidePanel';
+import DiscardedCards from './DiscardedCards';
 
 export default function SideBar() {
   return (
     <View>
-      <DiscardedCards className="card-back-horizontal">
-        <p>Discarded cards</p>
-      </DiscardedCards>
+      <DiscardedCards />
       <MainCards />
       <SidePanel />
     </View>
@@ -23,18 +22,4 @@ const View = styled.div`
   justify-content: space-between;
   align-content: flex-start;
   align-items: center;
-`;
-
-const DiscardedCards = styled.div`
-  width: 200px;
-  height: 140px;
-  color: white;
-  position: relative;
-
-  p {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 `;
