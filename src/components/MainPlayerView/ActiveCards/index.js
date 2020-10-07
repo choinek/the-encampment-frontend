@@ -8,10 +8,22 @@ export default function MainPlayerView() {
   return (
     <>
       <ActiveCardsView>
-        <ActiveCard className="card-back" onClick={() => setIsOpen(true)} />
-        <ActiveCard className="card-back" onClick={() => setIsOpen(true)} />
-        <ActiveCard className="card-back" onClick={() => setIsOpen(true)} />
-        <ActiveCard className="card-back" onClick={() => setIsOpen(true)} />
+        <ActiveCard
+          className="card-back card-md"
+          onClick={() => setIsOpen(true)}
+        />
+        <ActiveCard
+          className="card-back card-md"
+          onClick={() => setIsOpen(true)}
+        />
+        <ActiveCard
+          className="card-back card-md"
+          onClick={() => setIsOpen(true)}
+        />
+        <ActiveCard
+          className="card-back card-md"
+          onClick={() => setIsOpen(true)}
+        />
       </ActiveCardsView>
       {isOpen ? <ActiveCardsPopup close={closePopup} isOpen={isOpen} /> : null}
     </>

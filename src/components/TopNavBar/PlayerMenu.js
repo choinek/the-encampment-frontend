@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Menu() {
+export default function PlayerMenu() {
   return (
     <View>
-      <h3>Day 1, Night</h3>
       <Stats>
-        <p>Hunger: 100%</p>
-        <p>Temperature: 20oC</p>
-        <p>Security: 100%</p>
+        <p> Stamina: 100%</p>
+        <p>Health: 100%</p>
       </Stats>
     </View>
   );

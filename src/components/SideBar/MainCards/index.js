@@ -9,7 +9,7 @@ export default function MainCards() {
   return (
     <>
       <Cards className="card-back" onClick={() => setIsOpen(true)}>
-        <p>Active Cards</p>
+        <p>Enviroment Cards</p>
       </Cards>
       {isOpen ? <MainCardsPopup close={closePopup} isOpen={isOpen} /> : null}
     </>
