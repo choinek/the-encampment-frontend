@@ -20,8 +20,6 @@ export default function App() {
       wsClient.send(
         JSON.stringify({ l: 'Paulinow', m: 'Siemanko', r: 'room' }),
       );
-
-      wsClient.send(JSON.stringify({ l: 'Paulinow', m: 'Siemanko' }));
     };
     wsClient.onclose = () => console.warn('ws closed');
 
@@ -39,8 +37,8 @@ export default function App() {
 
       if (currentMessage !== message) {
         updateMessage(currentMessage);
-        if (message.m) {
-          updateCurrentChatMessage(message.m);
+        if (currentMessage.m) {
+          updateCurrentChatMessage(`${currentMessage.l}: ${currentMessage.m}`);
         }
       }
     };
@@ -55,7 +53,7 @@ export default function App() {
       <TopNavBar time={message.s} />
       <SideBar isPaused={isPaused} players={message.p} setPause={setPause} />
       <MainPlayerView />
-      <Widget />
+      <Widget title="Encampment chat" />
     </div>
   );
 }
