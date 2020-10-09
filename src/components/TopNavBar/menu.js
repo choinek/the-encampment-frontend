@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-export default function Menu() {
+export default function Menu({ time }) {
   return (
     <View>
-      <h3>Day 1, Night</h3>
+      <h3>Day 1, {time === 1 ? 'Day' : 'Night'}</h3>
       <Stats>
         <p>Hunger: 100%</p>
         <p>Temperature: 20oC</p>
@@ -33,3 +34,7 @@ const Stats = styled.div`
   align-content: flex-start;
   align-items: center;
 `;
+
+Menu.propTypes = {
+  time: PropTypes.number.isRequired,
+};

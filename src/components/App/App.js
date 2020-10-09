@@ -39,12 +39,8 @@ export default function App() {
   }, [isPaused, ws]);
   return (
     <div className={classes.container}>
-      <TopNavBar />
-      <SideBar
-        isPaused={isPaused}
-        players={message.players}
-        setPause={setPause}
-      />
+      <TopNavBar time={message.s} />
+      <SideBar isPaused={isPaused} players={message.p} setPause={setPause} />
       <MainPlayerView />
     </div>
   );

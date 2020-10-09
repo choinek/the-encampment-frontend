@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import classes from './TopNavBar.module.css';
 import Menu from './menu';
 import PlayerMenu from './PlayerMenu';
 
-export default function TopNavBar() {
+export default function TopNavBar({ time }) {
   return (
     <View className={classes.playerView}>
-      <Menu />
+      <Menu time={time} />
       <PlayerMenu />
     </View>
   );
@@ -21,3 +22,7 @@ const View = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
 `;
+
+TopNavBar.propTypes = {
+  time: PropTypes.number.isRequired,
+};
