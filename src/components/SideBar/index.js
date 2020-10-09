@@ -5,12 +5,12 @@ import MainCards from './MainCards';
 import SidePanel from './SidePanel';
 import DiscardedCards from './DiscardedCards';
 
-export default function SideBar({ isPaused, setPause }) {
+export default function SideBar({ isPaused, setPause, players }) {
   return (
     <View>
       <DiscardedCards />
       <MainCards />
-      <SidePanel isPaused={isPaused} setPause={setPause} />
+      <SidePanel isPaused={isPaused} setPause={setPause} players={players} />
     </View>
   );
 }
@@ -28,4 +28,5 @@ const View = styled.div`
 SideBar.propTypes = {
   setPause: PropTypes.func.isRequired,
   isPaused: PropTypes.bool.isRequired,
+  players: PropTypes.array.isRequired,
 };
