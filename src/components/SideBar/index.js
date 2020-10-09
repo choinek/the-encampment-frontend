@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import MainCards from './MainCards';
 import SidePanel from './SidePanel';
 import DiscardedCards from './DiscardedCards';
 
-export default function SideBar() {
+export default function SideBar({ isPaused, setPause }) {
   return (
     <View>
       <DiscardedCards />
       <MainCards />
-      <SidePanel />
+      <SidePanel isPaused={isPaused} setPause={setPause} />
     </View>
   );
 }
@@ -23,3 +24,8 @@ const View = styled.div`
   align-content: flex-start;
   align-items: center;
 `;
+
+SideBar.propTypes = {
+  setPause: PropTypes.func.isRequired,
+  isPaused: PropTypes.bool.isRequired,
+};

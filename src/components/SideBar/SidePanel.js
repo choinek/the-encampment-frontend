@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-export default function SidePanel() {
+export default function SidePanel({ isPaused, setPause }) {
   return (
     <Panel>
+      <button type="submit" onClick={() => setPause(!isPaused)}>
+        {isPaused ? 'Resume' : 'Pause'}
+      </button>
       <p>Players:</p>
       <br />
       <p>Player 1</p>
@@ -24,3 +28,8 @@ const Panel = styled.div`
     left: 20%;
   }
 `;
+
+SidePanel.propTypes = {
+  setPause: PropTypes.func.isRequired,
+  isPaused: PropTypes.bool.isRequired,
+};
