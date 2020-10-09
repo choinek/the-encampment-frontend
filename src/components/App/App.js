@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { addResponseMessage, Widget } from 'react-chat-widget';
 import MainPlayerView from '../MainPlayerView';
 import classes from './App.module.css';
 import TopNavBar from '../TopNavBar';
 import SideBar from '../SideBar';
+import 'react-chat-widget/lib/styles.css';
 
 export default function App() {
   const [isPaused, setPause] = useState(false);
   const [ws, setWs] = useState(null);
   const [message, updateMessage] = useState('');
+  const [currentChatMessage, updateCurrentChatMessage] = useState('');
 
   useEffect(() => {
     const wsClient = new WebSocket('wss://encampment.wroclaw.pl/');
@@ -17,6 +20,8 @@ export default function App() {
       wsClient.send(
         JSON.stringify({ l: 'Paulinow', m: 'Siemanko', r: 'room' }),
       );
+
+      wsClient.send(JSON.stringify({ l: 'Paulinow', m: 'Siemanko' }));
     };
     wsClient.onclose = () => console.warn('ws closed');
 
@@ -34,14 +39,23 @@ export default function App() {
 
       if (currentMessage !== message) {
         updateMessage(currentMessage);
+        if (message.m) {
+          updateCurrentChatMessage(message.m);
+        }
       }
     };
-  }, [isPaused, ws]);
+
+    if (currentChatMessage) {
+      addResponseMessage(currentChatMessage);
+    }
+  }, [isPaused, ws, message]);
+
   return (
     <div className={classes.container}>
       <TopNavBar time={message.s} />
       <SideBar isPaused={isPaused} players={message.p} setPause={setPause} />
       <MainPlayerView />
+      <Widget />
     </div>
   );
 }
