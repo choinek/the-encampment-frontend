@@ -1,0 +1,11 @@
+version: '3'
+services:
+  costam-costam-frontend:
+    tty: true
+    build:
+      context: .
+      dockerfile: ./docker.dockerfile
+    container_name: costam-costam-frontend
+    restart: on-failure
+    ports:
+      - '3000:3000'
